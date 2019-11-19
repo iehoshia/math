@@ -1,4 +1,4 @@
-key = 'GUIDE'
+key = 'NOPQRSTUVWXYZ'
 base = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 message = 'MENSAJE'
 
@@ -7,7 +7,7 @@ print(base)
 print(message)
 
 base_lenght = len(base) - 1
-key_lenght = len(key)
+key_lenght = len(key) - 1
 message_lenght = len(message) - 1
 
 codes = []
@@ -34,6 +34,7 @@ def get_index(key, array):
 			return i
 		i += 1
 reverse_message = ''
+
 i = 0
 while i <= message_lenght:
 	current_key = message[i]

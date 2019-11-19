@@ -5,7 +5,8 @@ def rot13(phrase):
        out_phrase += abc[(abc.find(char)+13)%26]
    return out_phrase
 
-phrase = "xthexrussiansxarexcoming"
+phrase = "mensaje"
+print(phrase)
 print(rot13(phrase))
 # kgurkehffvnafknerkpbzvat
 print(rot13(rot13(phrase)))
