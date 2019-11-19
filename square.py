@@ -6,12 +6,11 @@ def calculate_area(side):
 def calculate_perimeter(side):
 	return 4 * side
 
-side = int(input('Enter side size: '))
-
-area = calculate_area(side)
-perimeter = calculate_perimeter(side)
-
-
 if __name__ == "__main__":
+	side = int(input('Enter side size: '))
+
+	area = calculate_area(side)
+	perimeter = calculate_perimeter(side)
+
 	print("Area ", area)
 	print("Perimeter ", perimeter)
