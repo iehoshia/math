@@ -23,8 +23,5 @@ if __name__ == '__main__':
 	layout.addWidget(QPushButton('Button (2, 1) + 2 Columns Span'), 2, 1, 1, 2)
 	window.setLayout(layout)
 
-
-	window.setLayout(layout)
-
 	window.show()
 	sys.exit(app.exec_())
