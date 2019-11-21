@@ -10,9 +10,10 @@ from PyQt5.QtWidgets import QApplication, \
 if __name__ == '__main__':
 	app = QApplication(sys.argv)
 	window = QWidget()
-	window.setWindowTitle('PyQt5 App')
-	window.setGeometry(100, 100, 180, 280)
-	window.move(60, 15)
+	window.setWindowTitle('My First App - Josias')
+	window.setGeometry(100, 100, 280, 280)
+	window.move(600, 200)
+	window.showMaximized()
 	helloMsg = QLabel('<h1>Hello World!</h1>', parent=window)
 	helloMsg.move(60, 15)
 
