@@ -5,6 +5,8 @@ from PyQt5.QtWidgets import QLabel
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtWidgets import QStatusBar
 from PyQt5.QtWidgets import QToolBar
+from PyQt5.QtWidgets import QAction
+from PyQt5.QtGui import QIcon
 
 class Window(QMainWindow):
     """Main Window."""
@@ -34,8 +36,14 @@ class Window(QMainWindow):
         self.setStatusBar(status)
 
     def _createMenu(self):
+        # Create new action
+        openAction = QAction(QIcon('open.png'), '&Josias', self)
+        openAction.setShortcut('Ctrl+J')
+        openAction.setStatusTip('Print Josias')
+        openAction.triggered.connect(self._updateStatusBar)
+
         self.menu = self.menuBar().addMenu("&Menu")
-        self.menu.addAction('&Josias', self._updateStatusBar() )
+        self.menu.addAction(openAction)
         self.menu.addAction('&Exit', self.close)
 
 
