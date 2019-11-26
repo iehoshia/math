@@ -16,20 +16,18 @@ class Window(QMainWindow):
         self.setWindowTitle('QMainWindow')
         self.centralWidget = QLabel(self)
         self.setCentralWidget(self.centralWidget)
-        self.centralWidget.setText('Central Widget')
-        print(self.centralWidget.text())
+        self.centralWidget.setText('Hellow World!')
         self._createMenu()
         self._createToolBar()
         self._createStatusBar()
         self._updateStatusBar()
 
-    def greeting():
+    def greeting(self):
         """Slot function."""
         if self.centralWidget.text():
-            msg.setText("")
+            self.centralWidget.setText("")
         else:
-            msg.setText("Hello World!")
-
+            self.centralWidget.setText("Hello World!")
 
     def _createToolBar(self):
         tools = QToolBar()
@@ -51,7 +49,7 @@ class Window(QMainWindow):
         openAction = QAction(QIcon('open.png'), '&Josias', self)
         openAction.setShortcut('Ctrl+J')
         openAction.setStatusTip('Print Josias')
-        openAction.triggered.connect(self._updateStatusBar)
+        openAction.triggered.connect(self.greeting)
 
         self.menu = self.menuBar().addMenu("&Menu")
         self.menu.addAction(openAction)
