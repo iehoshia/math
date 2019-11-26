@@ -16,10 +16,7 @@ class Window(QMainWindow):
         self._createMenu()
         self._createToolBar()
         self._createStatusBar()
-
-    def _createMenu(self):
-        self.menu = self.menuBar().addMenu("&Menu")
-        self.menu.addAction('&Exit', self.close)
+        #self._updateStatusBar()
 
     def _createToolBar(self):
         tools = QToolBar()
@@ -30,6 +27,17 @@ class Window(QMainWindow):
         status = QStatusBar()
         status.showMessage("I'm the Status Bar")
         self.setStatusBar(status)
+
+    def _updateStatusBar(self):
+        status = QStatusBar()
+        status.showMessage('Josias')
+        self.setStatusBar(status)
+
+    def _createMenu(self):
+        self.menu = self.menuBar().addMenu("&Menu")
+        self.menu.addAction('&Josias', self._updateStatusBar() )
+        self.menu.addAction('&Exit', self.close)
+
 
 
 if __name__ == '__main__':
