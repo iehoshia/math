@@ -14,11 +14,22 @@ class Window(QMainWindow):
         """Initializer."""
         super().__init__(parent)
         self.setWindowTitle('QMainWindow')
-        self.setCentralWidget(QLabel("I'm the Central Widget"))
+        self.centralWidget = QLabel(self)
+        self.setCentralWidget(self.centralWidget)
+        self.centralWidget.setText('Central Widget')
+        print(self.centralWidget.text())
         self._createMenu()
         self._createToolBar()
         self._createStatusBar()
         self._updateStatusBar()
+
+    def greeting():
+        """Slot function."""
+        if self.centralWidget.text():
+            msg.setText("")
+        else:
+            msg.setText("Hello World!")
+
 
     def _createToolBar(self):
         tools = QToolBar()
