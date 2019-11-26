@@ -1,6 +1,5 @@
 # Filename: signals_slots.py
 
-
 """Signals and slots example."""
 
 import sys
