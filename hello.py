@@ -18,4 +18,6 @@ if __name__ == '__main__':
     #APP.run()
     app.run(host='0.0.0.0', port=80)
 
+# cd /opt/inhoshia/test
+# source bin/activate
 # nano flask.py
