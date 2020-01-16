@@ -48,8 +48,9 @@ class PyCalcUi(QMainWindow):
         self.setCentralWidget(self._centralWidget)
         self._centralWidget.setLayout(self.generalLayout)
         # Create the display and the buttons
-        self._createDisplay()
         self._createButtons()
+        self._createDisplay()
+        self._createExitButton()
 
     def _createDisplay(self):
         """Create the display."""
@@ -61,6 +62,14 @@ class PyCalcUi(QMainWindow):
         self.display.setReadOnly(True)
         # Add the display to the general layout
         self.generalLayout.addWidget(self.display)
+
+    def _createExitButton(self):
+        self.button = QPushButton()
+        self.button.setFixedHeight(35)
+        self.button.setFixedWidth(35)
+        self.button.setText("Exit")
+        self.button.clicked.connect(self.close)
+        self.generalLayout.addWidget(self.button)
 
     def _createButtons(self):
         """Create the buttons."""
