@@ -25,7 +25,7 @@ def cyclefor():
             is_prime = True
             if tmp == 0:
                 is_prime = False
-                datas.append([i, "IS NOT PRIME"])
+
                 break
             if is_prime:
                 datas.append([i, "IS PRIME"])
