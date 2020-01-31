@@ -20,15 +20,15 @@ def phone():
 def cyclefor():
     datas = []
     for i in range(0,100):
+        is_prime = True
         for j in range (2, i-1):
             tmp = i % j
-            is_prime = True
             if tmp == 0:
                 is_prime = False
 
                 break
-            if is_prime:
-                datas.append([i, "IS PRIME"])
+        if is_prime:
+            datas.append([i, "IS PRIME"])
 
         #datas.append(i)
     return render_template('ciclofor.html',
