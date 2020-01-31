@@ -22,10 +22,14 @@ def cyclefor():
     for i in range(0,100):
         for j in range (2, i-1):
             tmp = i % j
+            is_prime = True
             if tmp == 0:
-                print(i, "IS NOT PRIME")
-                datas.append(i)
+                is_prime = False
+                datas.append([i, "IS NOT PRIME"])
                 break
+            if is_prime:
+                datas.append([i, "IS PRIME"])
+
         #datas.append(i)
     return render_template('ciclofor.html',
         datas=datas)
