@@ -19,13 +19,12 @@ def phone():
 @app.route('/for')
 def cyclefor():
     datas = []
-    for i in range(0,100):
+    for i in range(2,100):
         is_prime = True
         for j in range (2, i-1):
             tmp = i % j
             if tmp == 0:
                 is_prime = False
-
                 break
         if is_prime:
             datas.append([i, "IS PRIME"])
