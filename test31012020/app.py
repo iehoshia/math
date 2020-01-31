@@ -18,7 +18,9 @@ def phone():
 
 @app.route('/for')
 def cyclefor():
-    datas = [1,2,3,4,5,6,9,10]
+    datas = []
+    for i in range(0,100):
+        datas.append(i)
     return render_template('ciclofor.html',
         datas=datas)
 
