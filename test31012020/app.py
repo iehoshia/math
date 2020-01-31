@@ -20,9 +20,16 @@ def phone():
 def cyclefor():
     datas = []
     for i in range(0,100):
-        datas.append(i)
+        for j in range (2, i-1):
+            tmp = i % j
+            if tmp == 0:
+                print(i, "IS NOT PRIME")
+                datas.append(i)
+                break
+        #datas.append(i)
     return render_template('ciclofor.html',
         datas=datas)
 
 if __name__ == '__main__':
     app.run(port=8002, host='0.0.0.0', debug=True)
+
