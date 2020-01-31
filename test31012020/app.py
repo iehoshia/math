@@ -28,10 +28,15 @@ def cyclefor():
                 break
         if is_prime:
             datas.append([i, "IS PRIME"])
+        t = 5
+        potencia = 1
+        for i in range(1,50):
+            print(potencia, t)
+            potencia = potencia * t
 
-        #datas.append(i)
     return render_template('ciclofor.html',
-        datas=datas)
+        datas=datas,
+        potencia=potencia)
 
 if __name__ == '__main__':
     app.run(port=8002, host='0.0.0.0', debug=True)
