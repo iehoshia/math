@@ -3,7 +3,7 @@
 {% with messages = get_flashed_messages(with_categories=true) %}
 {% if messages %}
 <ul>
-                    {% for message in messages %}
+{% for message in messages %}
  	<li>{{ message[1] }}</li>
 {% endfor %}</ul>
 {% endif %}
@@ -12,6 +12,8 @@
             {{ form.csrf }}
 <div class="input text">
                 {{ form.name.label }} {{ form.name }}</div>
+<div class="input text">
+                {{ form.lastname.label }} {{ form.lastname }}</div>
 <div class="input submit">
                 <input type="submit" value="Submit"></div>
 </form>
