@@ -4,12 +4,12 @@
 {% if messages %}
 <ul>
                     {% for message in messages %}
- 	<li>{ { message[1] }}</li>
+ 	<li>{{ message[1] }}</li>
 {% endfor %}</ul>
 {% endif %}
 {% endwith %}
 <form action="" method="post">
-            &#123; &#123; form.csrf &#125;&#125;
+            {{ form.csrf }}
 <div class="input text">
                 {{ form.name.label }} {{ form.name }}</div>
 <div class="input submit">
