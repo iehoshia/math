@@ -8,10 +8,10 @@ import random
 def suma(a,b):
     return a+b, a-b, a*b,a%b
 
-print(suma(10,20))
-print(suma(20,20))
-print(suma(30,20))
-print(suma(40,20))
+#print(suma(10,20))
+#print(suma(20,20))
+#print(suma(30,20))
+#print(suma(40,20))
 
 '''
 Euclid's algorithm for determining the greatest common divisor
@@ -22,12 +22,12 @@ def gcd(a, b):
         a, b = b, a % b
     return a
 
-print(gcd(36,256))
+#print(gcd(36,256))
 
-print(gcd(21,78))
+#print(gcd(21,78))
 
 
-print(gcd(170, 750))
+#print(gcd(170, 750))
 
 
 '''
@@ -36,14 +36,14 @@ Euclid's extended algorithm for finding the multiplicative inverse of two number
 def multiplicative_inverse(e, phi):
     for i in range(1,phi):
         res = e * i % phi
-        print("RES",res,e,i,phi)
+        #print("RES",res,e,i,phi)
         if res == 1:
             return i
-print(multiplicative_inverse(127, 211))
+#print(multiplicative_inverse(127, 211))
 
 '''
 Tests to see if a number is prime.
-'''
+
 def is_prime(num):
     prime = True
     if num == 2:
@@ -58,6 +58,7 @@ def is_prime(num):
     return prime
 print("127",is_prime(127))
 print("******")
+'''
 
 def is_prime(num):
     if num == 2:
@@ -65,12 +66,12 @@ def is_prime(num):
     if num < 2 or num % 2 == 0:
         return False
     for n in range(3, int(num**0.5)+2, 2):
-        print(n,num)
+        #print(n,num)
         if num % n == 0:
             return False
     return True
 
-print("127",is_prime(127))
+#print("127",is_prime(127))
 
 def generate_keypair(p, q):
     if not (is_prime(p) and is_prime(q)):
@@ -98,7 +99,7 @@ def generate_keypair(p, q):
     #Public key is (e, n) and private key is (d, n)
     return ((e, n), (d, n))
 
-print(generate_keypair(19,29))
+#print(generate_keypair(19,29))
 
 def encrypt(pk, plaintext):
     #Unpack the key into it's components
@@ -109,8 +110,8 @@ def encrypt(pk, plaintext):
     #Return the array of bytes
     return chipher
 
-print(encrypt((257,551),'JOSIAS'))
-print(encrypt((257,551),'FERNANDO'))
+#print(encrypt((257,551),'JOSIAS'))
+#print(encrypt((257,551),'FERNANDO'))
 
 def decrypt(pk, ciphertext):
     #Unpack the key into its components
