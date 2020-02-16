@@ -99,7 +99,7 @@ def generate_keypair(p, q):
     #Public key is (e, n) and private key is (d, n)
     return ((e, n), (d, n))
 
-#print(generate_keypair(19,29))
+print(generate_keypair(19,29))
 
 def encrypt(pk, plaintext):
     #Unpack the key into it's components
@@ -110,17 +110,17 @@ def encrypt(pk, plaintext):
     #Return the array of bytes
     return chipher
 
-#print(encrypt((257,551),'JOSIAS'))
-#print(encrypt((257,551),'FERNANDO'))
+print(encrypt((257,551),'JOSIAS'))
 
 def decrypt(pk, ciphertext):
     #Unpack the key into its components
     key, n = pk
     #Generate the plaintext based on the ciphertext and key using a^b mod m
-    #plain = [chr((char ** key) % n) for char in ciphertext]
+    plain = [chr((char ** key) % n) for char in ciphertext]
     plain = [chr(pow(char, key, n)) for char in ciphertext]
     #Return the array of bytes as a string
     return ''.join(plain)
+
 
 
 if __name__ == '__main__':
