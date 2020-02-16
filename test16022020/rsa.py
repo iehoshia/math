@@ -58,6 +58,7 @@ def is_prime(num):
     return prime
 print("127",is_prime(127))
 print("******")
+
 def is_prime(num):
     if num == 2:
         return True
