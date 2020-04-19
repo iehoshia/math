@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		@media (min-width: 601px) {
+			.l-desktop #inner-div {
+				border: 1px solid #000;
+				height: 30px;
+				background-color: #ff0000;
+			}
+			.l-tablet{
+				display: none;
+			}
+		}
+		@media (max-width: 600px) {
+			.l-tablet #inner-div {
+				border: 1px solid #000;
+				height: 30px;
+				background-color: #00ff00;
+			}
+			.l-desktop{
+				display: none;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="l-desktop">
+		<div id="inner-div">Desktop</div>
+	</div>
+	<div class="l-tablet">
+		<div id="inner-div">Tablet</div>
+	</div>
+</body>
+</html>
