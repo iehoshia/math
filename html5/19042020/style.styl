@@ -1,0 +1,84 @@
+body, ul, li, div
+	margin 0
+	padding 0
+
+@media (max-width 480px)
+	// mobile
+	.container
+		.inner-container
+			.content
+				ul
+					li:hover
+						background #ff33ff !important
+
+@media (max-width 980px)
+	// tablet
+	.container
+		background #f3f3f3
+		border 1px solid #00ff00
+		margin 10px
+		padding 10px
+		.inner-container
+			background #f1f1f1
+			border 1px solid #0000ff
+			margin 20px
+			padding 20px
+			.content
+				background #e2e2e2
+				border 1px solid #ff0000
+				margin 15px
+				padding 15px
+				ul
+					padding 25px
+					li
+						font-family verdana arial times-new-roman
+						font-size 20px
+						padding-top 10px
+						padding-bottom 10px
+						border 1px solid #939393
+						margin-top 10px
+						list-style none
+						padding-left 15px
+						padding-right 15px
+						text-align center
+						background #f3f3f3
+					li:hover
+						background #ffff00
+@media (min-width 981px)
+	// desktop
+	.container
+		background #f3f3f3
+		border 1px solid #00ff00
+		margin 10px
+		padding 10px
+		.inner-container
+			background #f1f1f1
+			border 1px solid #0000ff
+			margin 0
+			padding 0
+			.content
+				background #e2e2e2
+				border 1px solid #ff0000
+				margin 15px
+				padding 15px
+				height 60px
+				ul
+					padding 5px
+					li
+						font-family verdana arial times-new-roman
+						font-size 20px
+						padding-top 10px
+						padding-bottom 10px
+						border 1px solid #939393
+						list-style none
+						padding-left 15px
+						padding-right 15px
+						text-align center
+						background #f3f3f3
+						width 160px
+						height 30px
+						float left
+						margin 5px
+						padding 10px
+					li:hover
+						background #11f3f3
