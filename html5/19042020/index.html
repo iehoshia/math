@@ -9,15 +9,28 @@
 		<div class="inner-container">
 			<div class="content">
 				<ul>
-					<li>Mes 1</li>
-					<li>Mes 2</li>
-					<li>Mes 3</li>
-					<li>Mes 4</li>
-					<li>Mes 5</li>
+					<li onclick="myFunction()">Mes 1</li>
+					<li onclick="myFunction()">Mes 2</li>
+					<li onclick="myFunction()">Mes 3</li>
+					<li onclick="myFunction()">Mes 4</li>
+					<li onclick="myFunction()">Mes 5</li>
 				</ul>
+				<div class="popuptext" id="myPopup">Despliegue de información</div>
 			</div>
 		</div>
 	</div>
+	<script>
+		// When the user clicks on <div>, open the popup
+		function myFunction() {
+		  console.log("A")
+		  var x = document.getElementById("myPopup");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		}
+	</script>
 
 </body>
 </html>
