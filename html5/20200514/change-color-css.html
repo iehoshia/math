@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Change background - color</title>
+</head>
+<body>
+	<p id="superior" class="psuperior">PSUP</p>
+	<p id="inferior" class="psuperior">PINF</p>
+	<button class="buttonplus" onclick="textEvent()">Change Text on PINF</button>
+	<button class="buttonplus" onclick="colorEvent()">Change color on PSUP</button>
+
+	<script type="text/javascript">
+		var p_up = document.getElementById("superior");
+		var p_inf = document.getElementById("inferior");
+		var str = "Texto desde javascript";
+
+		function changeText(text, element){
+			element.innerHTML = text;
+		}
+
+		function textEvent(){
+			console.log("Change started!");
+			changeText('JS Texto', p_inf);
+			console.log("Change ended!");
+		}
+
+		function changeBackgroundColor(color, element){
+			element.style.background = color;
+		}
+
+		function changeTextColor(color, element) {
+			element.style.color = color;
+		}
+
+		// *args, **kwarg
+		function colorEvent(){
+			//p_up.style.background = 'yellow';
+			//p_up.style.color = 'red';
+			changeBackgroundColor('blue', p_up);
+			changeTextColor('red', p_up);
+		}
+	</script>
+
+</body>
+</html>
