@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>JavaScript For Loop</title>
+</head>
+<body>
+	<h2>Javascript For Loop</h2>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		var cars = ["BMW", "Volvo", "Saab",
+			"Ford", "Fiat", "Audi", "Subaru",
+			"Toyota", "Mazda", "Foton",
+			"Ferrari", "Mercedes",
+			"Lamborgini", "Chevolet",
+			"Pontiac", "Hyundai",
+			"KIA","Nissan", "Datson"]; // array type
+		//var cars= "HOY ES DIECIETE";
+		var text = "";
+		var i;
+		x = cars.length;
+		if (x < 20) {
+			console.log("Current #s of cars",x)
+			for (i=0; i<cars.length; i++){
+				console.log("Brand #", i, cars[i]);
+				text += i +" " + cars[i] + "<br>"; // iteracion
+			}
+		} else {
+			console.log("Nothing to display");
+		}
+		document.getElementById('demo').innerHTML = text;
+
+	</script>
+
+</body>
+</html>
