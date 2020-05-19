@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<title>JSON parse</title>
+</head>
+<body>
+	<h2>Create Object from JSON String</h2>
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		var json = '{"employees": [' +
+			'{"firstName":"Juan","lastName":"Perez"},' +
+			'{"firstName":"Roberto","lastName":"Juarez"},' +
+			'{"firstName":"Julian","lastName":"Sanchez"},' +
+			'{"firstName":"Marco","lastName":"Santizo"}' +
+		'],'+
+		'"parties": [' +
+			'{"firstName":"Juan","lastName":"Perez"},' +
+			'{"firstName":"Roberto","lastName":"Juarez"},' +
+			'{"firstName":"Julian","lastName":"Sanchez"},' +
+			'{"firstName":"Marco","lastName":"Santizo"},' +
+			'{"firstName":"Mateo","lastName":"Ramirez"},' +
+			'{"firstName":"Rodrigo","lastName":"Cerezo"}' +
+		']}';
+
+		var obj = JSON.parse(json);
+		var text = "";
+
+		//text += obj.employees[0].firstName + ' ' + obj.employees[0].lastName;
+		text += "Employees" + "<br>" + "<br>"
+		for (i=0; i<obj.employees.length; i++){
+			//console.log(obj.employees[i].lastName);
+			text += i + " " +
+				obj.employees[i].firstName + " " +
+				obj.employees[i].lastName + "<br>";
+
+		}
+		text += "<br>" +"Parties" + "<br>" + "<br>"
+		for (i=0; i<obj.parties.length; i++){
+			text += i + " " +
+				obj.parties[i].firstName + " " +
+				obj.parties[i].lastName + "<br>";
+		}
+
+		document.getElementById('demo').innerHTML = text;
+	</script>
+
+</body>
+</html>

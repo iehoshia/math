@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<body>
+
+<h2>Create Object from JSON String</h2>
+
+<p id="demo"></p>
+
+<script>
+var json = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+obj = JSON.parse(json);
+text ="";
+var count = Object.keys(obj).length;
+
+for (i=0; i<obj.employees.length; i++){
+	console.log("Brand #", i, obj.employees[i].lastName);
+	text += i +" " + obj.employees[i].lastName + "<br>"; // iteracion
+}
+//document.getElementById("demo").innerHTML =
+//obj.employees[1].firstName + " " + obj.employees[1].lastName;
+
+document.getElementById('demo').innerHTML = text;
+</script>
+</body>
+</html>
