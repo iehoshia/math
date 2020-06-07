@@ -1,0 +1,14 @@
+*.pyc
+__pycache__
+*.git
+*Lib
+*.exe
+*.bat
+*.pyd
+*.fish
+*.dll
+*.ps
+*.ps*
+*.xsh
+*Scrips*
+*.rst
