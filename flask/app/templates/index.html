@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+{% block metas %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:url" content="https://www.apixela.net" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="API Centro de Capacitación" />
+<meta property="og:description" content="Curso en Línea " />
+<meta property="og:image" itemprop="image primaryImageOfPage" content="https://www.apixela.net/static/img/slide02.jpg" />
+
+{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet"
+      href="{{url_for('static', filename='css-minified/index.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<div class="row">
+		HOLA MUNDO
+		{{ wtf.quick_form(form) }}
+	</div>
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+	{{ super() }}
+{% endblock %}
